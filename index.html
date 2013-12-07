@@ -1,0 +1,36 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+		<title></title>
+		<script src="myscript.js"></script>
+	</head>
+	<body> 
+		<form name="fileform" id="fileform" method="post" enctype="multipart/form-data"  action="javascript: getFile()">
+			<input type="file" name="uploadfile" id="uploadfile" />
+			<input type="submit" value="Submit" />
+		</form>
+		<form name="textform" id="textform" method="post" action="javascript: randFile()">
+			n:<input type="text" size=2 maxlength=2 name="nrow" id="nrow" />
+			m:<input type="text" size=2 maxlength=2 name="ncol" id="ncol" />
+			<input type="submit" value="Random" />
+		</form>
+		<form name="checkform" id="checkform">
+			<input type="checkbox" name="ver" id="ver" />Vertical<br />
+			<input type="checkbox" name="hor" id="hor" />Horizontal<br />
+			<input type="button" onclick="resetvh()" name="redo" id="redo" value="Reset">
+		</form>
+		<p>
+		<input type="button" onclick="next()" name="next" id="next" value=">" />
+		<input type="button" onclick="prev()" name="prev" id="prev" value="<" />
+		<input type="button" onclick="nnext()" name="nnext" id="nnext" value=">>" />
+		<input type="button" onclick="pprev()" name="pprev" id="pprev" value="<<" />
+		<input type="button" onclick="stop()" name="stop" id="stop" value="stop" />
+		<table id="mytable" name="mytable" border="1">
+		</p>
+		<input type="button" onclick="upspeed()" name="upspeed" id="upspeed" value="+" />
+		<span name="speed" id="speed">&nbsp;&nbsp;1&nbsp;&nbsp;</span>
+		<input type="button" onclick="dwspeed()" name="dwspeed" id="dwspeed" value="-" />
+		</table>
+	</body>
+</html>
